@@ -121,23 +121,23 @@ class RestaurantCard extends StatelessWidget {
             ),
 
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Column(
             children: [
               Text(
                   name ,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   )
               ),
               Text(
                 description,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -153,21 +153,21 @@ class RestaurantCard extends StatelessWidget {
               ) ,
             ],
           ),
-          SizedBox(width: 35),
+          const SizedBox(width: 35),
           Column(
             children: [
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 distance,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                 )
                 ,),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               TextIconExpanded(
                 text: "",
                 icon: "assets/icons_zone/Location.svg",
-                color: Color(0xFFFCEFEB),
+                color: const Color(0xFFFCEFEB),
                 press: () {},
               ),
             ],

@@ -4,6 +4,7 @@ import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/favorite/favorite_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
+import 'package:shop_app/screens/qr_code/scanner.dart';
 
 const Color inActiveIconColor = Color(0xFF232141);
 
@@ -28,9 +29,7 @@ class _InitScreenState extends State<InitScreen> {
   final pages = [
     const HomeScreen(),
     const FavoriteScreen(),
-    const Center(
-      child: Text("Chat"),
-    ),
+    Scanner(),
     const ProfileScreen()
   ];
 
