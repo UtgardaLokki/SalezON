@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'icon_with_text.dart';
 import 'icon_with_text_expanded.dart';
-import 'search_field.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({

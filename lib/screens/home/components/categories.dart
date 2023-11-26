@@ -118,7 +118,7 @@ class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const CustomButton({
+  const CustomButton({super.key, 
     required this.image,
     required this.text,
     required this.onPressed,
@@ -137,10 +137,10 @@ class CustomButton extends StatelessWidget {
                 height: 80, // Adjust image size as needed
                 width: 80,
               ),
-              SizedBox(height: 8), // Space between image and text
+              const SizedBox(height: 8), // Space between image and text
               Text(
                 text,
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
             ],
           ),
