@@ -5,7 +5,7 @@ import 'package:shop_app/screens/favorite/favorite_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 
-const Color inActiveIconColor = Color(0xFFB6B6B6);
+const Color inActiveIconColor = Color(0xFF232141);
 
 class InitScreen extends StatefulWidget {
   const InitScreen({super.key});
@@ -47,14 +47,14 @@ class _InitScreenState extends State<InitScreen> {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/icons/Shop Icon.svg",
+              "assets/icons_zone/Main page off.svg",
               colorFilter: const ColorFilter.mode(
                 inActiveIconColor,
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: SvgPicture.asset(
-              "assets/icons/Shop Icon.svg",
+              "assets/icons_zone/Main page on.svg",
               colorFilter: const ColorFilter.mode(
                 kPrimaryColor,
                 BlendMode.srcIn,
@@ -64,14 +64,14 @@ class _InitScreenState extends State<InitScreen> {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/icons/Heart Icon.svg",
+              "assets/icons_zone/My coupons off.svg",
               colorFilter: const ColorFilter.mode(
                 inActiveIconColor,
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: SvgPicture.asset(
-              "assets/icons/Heart Icon.svg",
+              "assets/icons_zone/My coupons on.svg",
               colorFilter: const ColorFilter.mode(
                 kPrimaryColor,
                 BlendMode.srcIn,
@@ -81,14 +81,14 @@ class _InitScreenState extends State<InitScreen> {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/icons/Chat bubble Icon.svg",
+              "assets/icons_zone/QR scan off.svg",
               colorFilter: const ColorFilter.mode(
                 inActiveIconColor,
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: SvgPicture.asset(
-              "assets/icons/Chat bubble Icon.svg",
+              "assets/icons_zone/QR scan on.svg",
               colorFilter: const ColorFilter.mode(
                 kPrimaryColor,
                 BlendMode.srcIn,
@@ -98,14 +98,14 @@ class _InitScreenState extends State<InitScreen> {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/icons/User Icon.svg",
+              "assets/icons_zone/Search off.svg",
               colorFilter: const ColorFilter.mode(
                 inActiveIconColor,
                 BlendMode.srcIn,
               ),
             ),
             activeIcon: SvgPicture.asset(
-              "assets/icons/User Icon.svg",
+              "assets/icons_zone/Search on.svg",
               colorFilter: const ColorFilter.mode(
                 kPrimaryColor,
                 BlendMode.srcIn,

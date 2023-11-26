@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'components/categories.dart';
-import 'components/discount_banner.dart';
 import 'components/home_header.dart';
 import 'components/popular_product.dart';
 import 'components/special_offers.dart';
@@ -19,12 +18,27 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               HomeHeader(),
-              DiscountBanner(),
-              Categories(),
               SpecialOffers(),
               SizedBox(height: 20),
               PopularProducts(),
               SizedBox(height: 20),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                      padding: EdgeInsets.only(left: 20),
+                  ),
+                  Text(
+                    " Categories",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                    ),
+                  ),
+                  ]
+                ),
+              Categories(),
             ],
           ),
         ),

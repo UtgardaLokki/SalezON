@@ -33,9 +33,9 @@ List<Product> demoProducts = [
       "assets/images/ps4_console_white_4.png",
     ],
     colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
+      const Color(0xFF2A0504),
+      const Color(0xFF4A13D0),
+      const Color(0xFF544215),
       Colors.white,
     ],
     title: "Wireless Controller for PS4™",

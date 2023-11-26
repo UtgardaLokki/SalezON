@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../cart/cart_screen.dart';
-import 'icon_btn_with_counter.dart';
+import 'icon_with_text.dart';
+import 'icon_with_text_expanded.dart';
 import 'search_field.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -11,25 +11,27 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
+    return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Expanded(child: SearchField()),
-          const SizedBox(width: 16),
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Cart Icon.svg",
-            press: () => Navigator.pushNamed(context, CartScreen.routeName),
+          TextIconExpanded(
+            text: "Limassol",
+            icon: "assets/icons_zone/Location.svg",
+            color: Colors.white,
+            press: () {},
           ),
-          const SizedBox(width: 8),
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Bell.svg",
-            numOfitem: 3,
+          const SizedBox(width: 30),
+          TextIcon(
+            text: "Near by",
+            icon: "assets/icons_zone/navigation.svg",
+            press: () {},
+          ),
+          TextIcon(
+            text: "",
+            icon: "assets/icons/User.svg",
             press: () {},
           ),
         ],
-      ),
-    );
+      );
   }
 }

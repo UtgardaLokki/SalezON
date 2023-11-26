@@ -15,7 +15,7 @@ class SpecialOffers extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SectionTitle(
-            title: "Special for you",
+            title: "Limited ultra offers",
             press: () {},
           ),
         ),
@@ -25,16 +25,14 @@ class SpecialOffers extends StatelessWidget {
             children: [
               SpecialOfferCard(
                 image: "assets/images/Image Banner 2.png",
-                category: "Smartphone",
-                numOfBrands: 18,
+                category: "-90% offer !",
                 press: () {
                   Navigator.pushNamed(context, ProductsScreen.routeName);
                 },
               ),
               SpecialOfferCard(
                 image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
-                numOfBrands: 24,
+                category: "-30% Today only!",
                 press: () {
                   Navigator.pushNamed(context, ProductsScreen.routeName);
                 },
@@ -53,12 +51,10 @@ class SpecialOfferCard extends StatelessWidget {
     Key? key,
     required this.category,
     required this.image,
-    required this.numOfBrands,
     required this.press,
   }) : super(key: key);
 
   final String category, image;
-  final int numOfBrands;
   final GestureTapCallback press;
 
   @override
@@ -108,7 +104,6 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfBrands Brands")
                       ],
                     ),
                   ),
