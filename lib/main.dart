@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:flutter_inapp_notifications/flutter_inapp_notifications.dart';
 
 import 'routes.dart';
 import 'theme.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Flutter Way - Template',
       theme: AppTheme.lightTheme(context),
+      builder: InAppNotifications.init(),
       initialRoute: SignInScreen.routeName,
       routes: routes,
     );

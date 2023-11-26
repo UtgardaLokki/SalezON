@@ -9,11 +9,16 @@ import '../home/components/icon_with_text.dart';
 import '../home/components/icon_with_text_expanded.dart';
 
 class FavoriteScreen extends StatelessWidget {
+  static String routeName = "/favorite";
+
   const FavoriteScreen({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return const Scaffold(
+        body: SafeArea(
       child: Column(
         children: [
           HomeHeader(),
@@ -35,38 +40,47 @@ class FavoriteScreen extends StatelessWidget {
           ),
           SizedBox(height: 20),
           RestaurantCard(
-              name: "Text rest",
-              image: "assets/images/ps4_console_white_1.png",
+              name: "Mandarin Bar",
+              image: "assets/images/Frame 52.png",
               description: "Best of the best",
-              distance: " 3 meters away",
-              offerCount: "3 offers",
+              distance: " 3 m away",
+              offerCount: " 3 offers",
           ),
           SizedBox(height: 20),
           RestaurantCard(
-            name: "Text rest",
-            image: "assets/images/ps4_console_white_1.png",
+            name: "Piatsa Gourouna",
+            image: "assets/images/Frame 51.png",
             description: "Best of the best",
-            distance: " 3 meters away",
-            offerCount: "3 offers",
+            distance: " 6 m away",
+            offerCount: " 3 offers",
           ),
           SizedBox(height: 20),
           RestaurantCard(
-            name: "Text rest",
-            image: "assets/images/ps4_console_white_1.png",
+            name: "Smoke ON",
+            image: "assets/images/Frame 54.png",
             description: "Best of the best",
-            distance: " 3 meters away",
-            offerCount: "3 offers",
+            distance: " 15 m away",
+            offerCount: " 3 offers",
           ),
           SizedBox(height: 20),
           RestaurantCard(
-            name: "Text rest",
-            image: "assets/images/ps4_console_white_1.png",
+            name: "Bilbo Experience",
+            image: "assets/images/Frame 55.png",
             description: "Best of the best",
-            distance: " 3 meters away",
-            offerCount: "3 offers",
+            distance: " 34 m away",
+            offerCount: " 3 offers",
+          ),
+          SizedBox(height: 20),
+          RestaurantCard(
+            name: "Tartufo Restortan",
+            image: "assets/images/Frame 53.png",
+            description: "Best of the best",
+            distance: " 83 m away",
+            offerCount: " 3 offers",
           ),
         ],
       ),
+    ),
     );
   }
 }
@@ -94,15 +108,18 @@ class RestaurantCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: 10),
           ),
           CustomButton(
             image: AssetImage(image),
             text: '',
-            onPressed: () {
-              // Action for Button 1
-              print('Button 1 pressed');
-            },
+            onPressed: () => Navigator.pushNamed(
+              context,
+              DetailsScreen.routeName,
+              arguments: ProductDetailsArguments(
+                  product: demoProducts[4]),
+            ),
+
           ),
           SizedBox(width: 10),
           Column(

@@ -22,11 +22,8 @@ class _ProductImagesState extends State<ProductImages> {
     return Column(
       children: [
         SizedBox(
-          width: 238,
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Image.asset(widget.product.images[selectedImage]),
-          ),
+          width: 430,
+          child: Image.asset(widget.product.images[selectedImage]),
         ),
         // SizedBox(height: 20),
         Row(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
+import 'package:shop_app/screens/favorite/favorite_screen.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
@@ -17,15 +18,14 @@ class Categories extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 1),
               ),
               CustomButton(
-                image: const AssetImage('assets/images/ps4_console_blue_1.png'),
+                image: const AssetImage('assets/images/Categories 1.png'),
                 text: 'Eating Out',
                 onPressed: () {
-                  // Action for Button 1
-                  print('Button 1 pressed');
+                  Navigator.pushNamed(context, FavoriteScreen.routeName);
                 },
               ),
               CustomButton(
-                image: const AssetImage('assets/images/ps4_console_blue_2.png'),
+                image: const AssetImage('assets/images/Categories 2.png'),
                 text: 'Supermarkets',
                 onPressed: () {
                   // Action for Button 1
@@ -33,7 +33,7 @@ class Categories extends StatelessWidget {
                 },
               ),
               CustomButton(
-                image: const AssetImage('assets/images/ps4_console_blue_3.png'),
+                image: const AssetImage('assets/images/Categories 3.png'),
                 text: 'Clothes & etc.',
                 onPressed: () {
                   // Action for Button 1
@@ -50,7 +50,7 @@ class Categories extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 1),
       ),
           CustomButton(
-            image: const AssetImage('assets/images/ps4_console_white_1.png'),
+            image: const AssetImage('assets/images/Categories 4.png'),
             text: 'Entertainment',
             onPressed: () {
               // Action for Button 1
@@ -58,7 +58,7 @@ class Categories extends StatelessWidget {
             },
           ),
           CustomButton(
-            image: const AssetImage('assets/images/ps4_console_white_2.png'),
+            image: const AssetImage('assets/images/Categories 5.png'),
             text: 'Transport',
             onPressed: () {
               // Action for Button 1
@@ -66,7 +66,7 @@ class Categories extends StatelessWidget {
             },
           ),
           CustomButton(
-            image: const AssetImage('assets/images/ps4_console_white_3.png'),
+            image: const AssetImage('assets/images/Categories 6.png'),
             text: 'Health & Beauty',
             onPressed: () {
               // Action for Button 1
@@ -135,7 +135,7 @@ class CustomButton extends StatelessWidget {
               Image(
                 image: image,
                 height: 80, // Adjust image size as needed
-                width: 80,
+                width: 110,
               ),
               SizedBox(height: 8), // Space between image and text
               Text(

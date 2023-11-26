@@ -1,4 +1,6 @@
 import 'package:flutter/widgets.dart';
+import 'package:shop_app/screens/favorite/favorite_screen.dart';
+import 'package:shop_app/screens/first_coupon/first_coupon.dart';
 import 'package:shop_app/screens/products/products_screen.dart';
 
 import 'screens/cart/cart_screen.dart';
@@ -30,4 +32,6 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => const DetailsScreen(),
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  FavoriteScreen.routeName: (context) => const FavoriteScreen(),
+  FirstCouponScreen.routeName: (context) => const FirstCouponScreen(),
 };

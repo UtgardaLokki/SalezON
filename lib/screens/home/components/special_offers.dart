@@ -24,15 +24,29 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
-                category: "-90% offer !",
+                image: "assets/images/offer1.png",
+                category: "",
                 press: () {
                   Navigator.pushNamed(context, ProductsScreen.routeName);
                 },
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "-30% Today only!",
+                image: "assets/images/offer2.png",
+                category: "",
+                press: () {
+                  Navigator.pushNamed(context, ProductsScreen.routeName);
+                },
+              ),
+              SpecialOfferCard(
+                image: "assets/images/offer3.png",
+                category: "",
+                press: () {
+                  Navigator.pushNamed(context, ProductsScreen.routeName);
+                },
+              ),
+              SpecialOfferCard(
+                image: "assets/images/offer4.png",
+                category: "",
                 press: () {
                   Navigator.pushNamed(context, ProductsScreen.routeName);
                 },
@@ -64,8 +78,8 @@ class SpecialOfferCard extends StatelessWidget {
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
-          width: 242,
-          height: 100,
+          width: 100,
+          height: 120,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Stack(
@@ -73,20 +87,6 @@ class SpecialOfferCard extends StatelessWidget {
                 Image.asset(
                   image,
                   fit: BoxFit.cover,
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.black54,
-                        Colors.black38,
-                        Colors.black26,
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(

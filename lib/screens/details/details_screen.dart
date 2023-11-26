@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:flutter_inapp_notifications/flutter_inapp_notifications.dart';
 
 import '../../models/Product.dart';
+import '../first_coupon/first_coupon.dart';
+import '../home/components/categories.dart';
+import '../home/components/icon_with_text.dart';
+import '../home/components/icon_with_text_expanded.dart';
 import 'components/color_dots.dart';
 import 'components/product_description.dart';
 import 'components/product_images.dart';
@@ -86,11 +91,24 @@ class DetailsScreen extends StatelessWidget {
                   pressOnSeeMore: () {},
                 ),
                 TopRoundedContainer(
-                  color: const Color(0xFFF6F7F9),
+                  color: Color(0xFFF6F7F9),
                   child: Column(
                     children: [
-                      ColorDots(product: product),
-                      ColorDots(product: product),
+                      CouponButton(
+                        image: const AssetImage('assets/images/Coupon1.png'),
+                        text: '',
+                        onPressed: () {
+                          Navigator.pushNamed(context, FirstCouponScreen.routeName);
+                        },
+                      ),
+                      CouponButton(
+                        image: const AssetImage('assets/images/Coupon2.png'),
+                        text: '',
+                        onPressed: () {
+                          Navigator.pushNamed(context, FirstCouponScreen.routeName);
+                        },
+                      ),
+
                     ],
                   ),
                 ),
@@ -98,20 +116,6 @@ class DetailsScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-      bottomNavigationBar: TopRoundedContainer(
-        color: Colors.white,
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.routeName);
-              },
-              child: const Text("Add To Cart"),
-            ),
-          ),
-        ),
       ),
     );
   }
@@ -122,3 +126,35 @@ class ProductDetailsArguments {
 
   ProductDetailsArguments({required this.product});
 }
+
+class CouponButton extends StatelessWidget {
+  final ImageProvider image;
+  final String text;
+  final VoidCallback onPressed;
+
+  const CouponButton({
+    required this.image,
+    required this.text,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: onPressed,
+          child: Column(
+            children: [
+              Image(
+                image: image, // Adjust image size as needed
+                width: 1000,
+              ), // Space between image and text
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
